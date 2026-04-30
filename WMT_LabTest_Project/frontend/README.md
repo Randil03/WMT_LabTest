@@ -47,3 +47,7 @@ ls -l node_modules/.bin/vite
 
 Good output:
 -rwxr-xr-x
+
+## Railway commands
+- build command = npm install
+- run = npm run start
