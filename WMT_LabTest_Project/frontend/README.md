@@ -19,3 +19,31 @@
 
 ## Vercel,railway
 - deploy through vercel
+
+## If Mac Permission Denied
+- 1. Make vite executable
+chmod +x node_modules/.bin/vite
+
+2. Run project
+npm run dev
+
+3. Fix all binaries
+chmod -R +x node_modules/.bin
+
+4. Clean reinstall (best fix)
+rm -rf node_modules package-lock.json
+npm install
+npm run dev
+
+5. Fix ownership (if used sudo before)
+sudo chown -R $(whoami) .
+
+Then reinstall:
+rm -rf node_modules package-lock.json
+npm install
+
+6. Check permissions
+ls -l node_modules/.bin/vite
+
+Good output:
+-rwxr-xr-x
